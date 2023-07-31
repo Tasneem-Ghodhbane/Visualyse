@@ -1,0 +1,52 @@
+
+   <nav class="sidebar" [ngClass]="{ 'close': isSidebarClosed }">
+    <header>
+        <div class="image-text">
+            <span class="image">
+                <img src="assets/line.png" alt="logo">
+            </span>
+
+            <div class="text header-text">
+                <span class="name">Visualyze</span>
+            </div>
+        </div>
+
+        <i class='bx bx-chevron-right toggle' (click)="toggleSidebar()"></i>
+    </header>
+
+    <div class="menu-bar">
+        <div class="menu">
+            <span class="view"> OVERVIEW</span>
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-git-commit icon'></i>
+                        <span class="text nav-text"> NODES</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-git-pull-request icon' ></i>
+                        <span class="text nav-text"> CALLS</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+            
+        <div class="bottom-content">
+            <li class="mode">
+                <div class="moon-sun">
+                    <i class='bx bx-moon icon moon'></i>
+                    <i class='bx bx-sun icon sun'></i>
+                </div>
+                <span class="mode-text text">Dark Mode</span>
+
+                <div class="toggle-switch">
+                    <span class="switch" (click)="toggleDarkMode()"></span>
+                </div>
+            </li>
+        </div>
+
+    </div>
+</nav>
