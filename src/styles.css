@@ -16,6 +16,8 @@
     --primary-color-light: #ddd2cd;
     --toggle-color: #FFF0F5;
     --text-color: #707070;
+    --button-color: #A0C3D2;
+
 
     /* ====== Transitions ======== */
     --tran-2: all 0.2s ease;
@@ -32,3 +34,5 @@
         --toggle-color: #FFF;
         --text-color: #ccc;
     }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

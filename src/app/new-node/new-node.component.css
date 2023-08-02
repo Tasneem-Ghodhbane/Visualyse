@@ -1,0 +1,9 @@
+.header{
+    color: var(--primary-color);
+}
+
+.submit{
+    color: #FFF;
+    background: var(--button-color);
+    border-color: var(--button-color);
+}
