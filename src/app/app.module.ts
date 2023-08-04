@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import { NodesTableComponent } from './nodes-table/nodes-table.component';
 import { NewNodeComponent } from './new-node/new-node.component';
+import { CallsTableComponent } from './calls-table/calls-table.component';
+import { NewCallComponent } from './new-call/new-call.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { NewNodeComponent } from './new-node/new-node.component';
     AppComponent,
     SidebarComponent,
     NodesTableComponent,
-    NewNodeComponent
+    NewNodeComponent,
+    CallsTableComponent,
+    NewCallComponent
   ],
   imports: [
     BrowserModule,

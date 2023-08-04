@@ -1,0 +1,52 @@
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <div class="button-container">
+      <div style="display: flex; justify-content: space-between; align-items: center; width: 30%;">
+          <span class="text">  CALLS MANAGEMENT</span>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; width: 20%;">
+          <button class="Export"> Export All</button>
+          <button class="Delete">Delete All</button>
+      </div>
+    </div>
+    <div>
+        <table id="table">
+            <thead>
+              <tr>
+                <th id="Producer">Producer/Issuer</th>
+                <th id="Target">Target/Consumer</th>
+                <th id="Type">Type</th>
+                <th id="Topic">Topic</th>
+                <th id="Event">Event Produced</th>
+                <th id="Api">API</th>
+                <th id="Description">Description</th>
+                <th id="Action">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+                
+              <tr>
+                <td>Iam-gui</td>
+                <td>Iam-user-service</td>
+                <td>Sync</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>
+                  <button class="Delete-icon">
+                    <a href="#">
+                      <i class='bx bx-trash icon'></i>
+                    </a>
+                  </button>
+                  <button class="Update-icon">
+                    <a href="#">
+                      <i class='bx bx-star icon'></i>
+                    </a>
+                  </button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+    </div>
+</div>

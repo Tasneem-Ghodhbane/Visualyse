@@ -1,17 +1,23 @@
-<div class="form-container">
-    <div class="add-new-node form">
-        <form>
-           <h3 class="header">ADD NEW NODE</h3> 
-        </form>
-    </div>
-    <div>
-        <form>
-            <h3 class="header">Import Node</h3>
+<div >
+    <section class="form-container add">
+        <form class="add-form">
+           <h3 class="header">Add New Node</h3> 
+           <div class="input-box">
             <label for="Name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
-            <label for="type">Type</label>
-            <input type="text" id="type">
+            <input type="text" id="name" placeholder="Enter node name">
+            </div>
+            <div class="input-box">
+                <label for="type">Type</label>
+                <input type="text" id="type" placeholder="Enter node type">
+            </div>
             <button class="submit">Add New Node</button>
         </form>
-    </div>
+    </section>
+    <section class="form-container import">
+        <form class="import-form">
+            <h3 class="header">Import Node</h3>
+            <button class="import">Upload Node</button>
+            <button class="submit">Import New Node</button>
+        </form>
+    </section>
 </div>
