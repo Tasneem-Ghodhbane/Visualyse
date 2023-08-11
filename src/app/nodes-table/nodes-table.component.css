@@ -1,7 +1,16 @@
+th{
+    font-weight: 500;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--body-color);
+    
+}
+
 .text{
     padding: 10px;
     color: var(--primary-color);
+    font-weight: 600;
 }
+
 
 .Add {
     background: var(--button-color);
@@ -45,7 +54,7 @@
     border-color: var(--body-color);
     background-color:#FFF;
     padding: 10px;
-
+    
 }
 
 #table .Delete-icon{
@@ -54,13 +63,7 @@
     border-color: #FFF;
     border-radius: 4px;
     width: 50px;
-    margin-left: 100px;    
-}
-
-
-th{
-    border-bottom: 1px solid var(--body-color);
-    
+    margin-left: 70px;    
 }
 
 #name{

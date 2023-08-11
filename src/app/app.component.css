@@ -1,11 +1,13 @@
-
-
 body{
     height: 100vh;
     background: var(--body-color);
     transition: var(--tran-5 );
-
-   
+    justify-content:left;
+    padding: 20px;
 }
 
-
+.grid-container{
+    margin-top: 0;
+    margin-left: 17%;
+    
+}

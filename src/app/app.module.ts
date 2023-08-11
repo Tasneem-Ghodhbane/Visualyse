@@ -10,6 +10,7 @@ import { NodesTableComponent } from './nodes-table/nodes-table.component';
 import { NewNodeComponent } from './new-node/new-node.component';
 import { CallsTableComponent } from './calls-table/calls-table.component';
 import { NewCallComponent } from './new-call/new-call.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +27,8 @@ import { NewCallComponent } from './new-call/new-call.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,35 +1,38 @@
 <div >
-    <section class="form-container add">
-        <form class="add-form">
-           <h3 class="header">Add New Call</h3> 
-           <div class="input-box">
-            <label for="Name">Call Type</label>
-            <input type="radio">
-            <label for="Name">Producer</label>
-            <input type="text" id="producer" >
-            <label for="Name">Consumer</label>
-            <input type="text" id="consumer" >
-            </div>
-            <div class="input-box">
-                <label for="type">Topic</label>
-                <input type="text" id="type" placeholder="Enter node type">
-                <label for="Name">Event Produced</label>
-                <input type="text" id="event">
-            <input type="text" id="Event-produced" >
-            </div>
-            <div class="input-box">
-                <label for="description">Description</label>
-                <input type="text" id="description" placeholder="Call Description">
-            </div>
-            <button class="submit">Add Call</button>
-        </form>
-    </section>
-    <section class="form-container import">
-        <form class="import-form">
-            <h3 class="header">Import Calls</h3>
-            <button class="import">Upload File</button>
-            <p>No file selected</p>
-            <button class="submit">Import</button>
-        </form>
-    </section>
+    <form class="add-form">
+        <h3 class="header">Add New Call</h3> 
+        <div class="input-box">
+         <label for="Name" >Call Type</label>
+         <select id="selectInput" name="type" [(ngModel)]="type" >
+            <!-- ou bien : select id="selectInput" name="type" [(ngModel)]="type" (change)="onTypeChange()"-->
+             <option value="sync">Synchronous</option>
+             <option value="async">Asynchronous</option>
+         </select>
+         
+         <div *ngIf = "type=='sync'">
+            <!--<div *ngIf = "!show">-->
+             <label for="Name">Issuer</label>
+             <input type="text" id="issuer" >
+             <label for="Name">Target</label>
+             <input type="text" id="target" >
+             <label for="Name">API</label>
+             <input type="text" id="API" placeholder="API">
+         </div>
+         <div *ngIf = "type=='async'">
+             <label for="Name">Producer</label>
+             <input type="text" id="producer" >
+             <label for="Name">Consumer</label>
+             <input type="text" id="consumer" >
+             <label for="Name">Topic</label>
+             <input type="text" id="topic" >
+             <label for="Name">Event Produced</label>
+             <input type="text" id="event-produced" >
+         </div>
+         <div class="input-box">
+             <label for="description">Description</label>
+             <input type="text" id="description" placeholder="Call Description">
+         </div>
+         <button class="submit">Add Call</button>
+        </div>
+    </form>
 </div>

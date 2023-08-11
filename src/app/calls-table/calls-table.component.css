@@ -1,5 +1,8 @@
 th{
-    font-weight: 300;
+    font-weight: 500;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--body-color);
+    justify-content: space-between;
 }
 
 .text{
@@ -45,11 +48,12 @@ th{
 
 #table{
     width: 100%;
-    max-width: 1030px;
+    max-width: 3000px;
     border: 1px solid ;
     border-color: var(--body-color);
     background-color:#FFF;
     padding: 10px;
+    
 }
 
 #table .Delete-icon, .Update-icon{
@@ -58,18 +62,12 @@ th{
     border-color: #FFF;
     border-radius: 4px;
     width: 50px;
-    margin-left: 100px;
+    margin-left: 5px;
 }
 
 #table .Update-icon{
     background-color: var(--button-color);
     border-color: var(--button-color);
-}
-
-
-th{
-    border-bottom: 1px solid var(--body-color);
-    
 }
 
 #name{

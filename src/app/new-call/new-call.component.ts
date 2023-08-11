@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class NewCallComponent {
 
+  type : string = "sync";
+
+  // takhtaf fl methode thenya
+  show: boolean = false;
+
+
+
+  onTypeChange() {
+    // Toggle properties based on type value (gonna keep the track on these properties selon type )
+    this.show = this.type === 'async';
+
+  }
+//
 }
