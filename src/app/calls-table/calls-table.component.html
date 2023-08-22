@@ -6,41 +6,41 @@
       </div>
       <div style="display: flex; justify-content: space-between; align-items: center; width: 20%;">
           <button class="Export"> Export All</button>
-          <button class="Delete">Delete All</button>
+          <button class="Delete" (click)="deleteAllItems()">Delete All</button>
       </div>
     </div>
     <div>
         <table id="table">
             <thead>
-              <tr>
-                <th id="Producer">Producer/Issuer</th>
-                <th id="Target">Target/Consumer</th>
-                <th id="Type">Type</th>
-                <th id="Topic">Topic</th>
-                <th id="Event">Event Produced</th>
-                <th id="Api">API</th>
-                <th id="Description">Description</th>
-                <th id="Action">Action</th>
+              <tr >
+                <th id="" style="width: 200px;">Producer/Issuer</th>
+                <th id="" style="width: 200px;">Target/Consumer</th>
+                <th id="" style="width: 100px;">Type</th>
+                <th id="" style="width: 100px;">Topic</th>
+                <th id="" style="width: 200px;">Event Produced</th>
+                <th id="" style="width: 100px;">API</th>
+                <th id="" style="width: 100px;">Description</th>
+                <th id="" style="width: 100px;">Action</th>
               </tr>
             </thead>
             <tbody>
                 
-              <tr>
-                <td>Iam-gui</td>
-                <td>Iam-user-service</td>
-                <td>Sync</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+              <tr *ngFor="let call of calls">
+                <td>{{ call.startPoint }}</td>
+                <td>{{ call.endPoint }}</td>
+                <td>{{ call.callType }}</td>
+                <td>{{ call.topic }}</td>
+                <td>{{ call.eventProduced }}</td>
+                <td>{{ call.API }}</td>
+                <td>{{ call.description }}</td>
                 <td>
-                  <button class="Delete-icon">
-                    <a href="#">
+                  <button class="Delete-icon" (click)="deleteCall(call.id)">
+                    <a >
                       <i class='bx bx-trash icon'></i>
                     </a>
                   </button>
                   <button class="Update-icon">
-                    <a href="#">
+                    <a >
                       <i class='bx bx-star icon'></i>
                     </a>
                   </button>

@@ -6,7 +6,7 @@
       </div>
       <div >
           <button class="Export"> Export All</button>
-          <button class="Delete">Delete All</button>
+          <button class="Delete" (click)="deleteAllItems()">Delete All</button>
       </div>
     </div>
     <div>
@@ -20,12 +20,12 @@
             </thead>
             <tbody>
                 
-              <tr>
-                <td>whatever</td>
-                <td>microservice</td>
+              <tr *ngFor="let node of nodes">
+                <td>{{ node.name }}</td>
+                <td>{{ node.type }}</td>
                 <td>
-                  <button class="Delete-icon">
-                    <a href="#">
+                  <button class="Delete-icon" (click)="delete(node.name)">
+                    <a >
                       <i class='bx bx-trash icon'></i>
                     </a>
                   </button>
@@ -35,4 +35,5 @@
             </tbody>
           </table>
     </div>
+    
 </div>

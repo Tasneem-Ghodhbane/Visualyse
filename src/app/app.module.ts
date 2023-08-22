@@ -11,6 +11,7 @@ import { NewNodeComponent } from './new-node/new-node.component';
 import { CallsTableComponent } from './calls-table/calls-table.component';
 import { NewCallComponent } from './new-call/new-call.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,14 +21,15 @@ import { FormsModule } from '@angular/forms';
     NodesTableComponent,
     NewNodeComponent,
     CallsTableComponent,
-    NewCallComponent
+    NewCallComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
 
   ],
   providers: [],

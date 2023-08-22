@@ -43,13 +43,10 @@ th{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1040px;
 }
 
 #table{
     width: 100%;
-    max-width: 3000px;
-    border: 1px solid ;
     border-color: var(--body-color);
     background-color:#FFF;
     padding: 10px;
@@ -70,21 +67,6 @@ th{
     border-color: var(--button-color);
 }
 
-#name{
-    width: 500px;
-    font-weight: 500;
-    font-size: 16px;
-
-}
-
-#Type{
-    width: 250px;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-#Action{
-    width: 250px;
-    font-weight: 500;
-    font-size: 16px;
+#table th{
+    padding: 5px;
 }
