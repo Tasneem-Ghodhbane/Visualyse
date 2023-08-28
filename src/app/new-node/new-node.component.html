@@ -1,14 +1,14 @@
 <div >
     <section class="form-container add">
-        <form class="add-form">
+        <form class="add-form" (ngSubmit)="addNode()" #addForm="ngForm">
            <h3 class="header">Add New Node</h3> 
            <div class="input-box">
             <label for="Name">Name</label>
-            <input type="text" id="name" placeholder="Enter node name">
+            <input type="text" id="name" name="nodeName" [(ngModel)]="newNode.name" placeholder="Enter node name" required >
             </div>
             <div class="input-box">
                 <label for="type">Type</label>
-                <input type="text" id="type" placeholder="Enter node type">
+                <input type="text" id="type" name="nodeType" [(ngModel)]="newNode.type" placeholder="Enter node type" required>
             </div>
             <button class="submit">Add New Node</button>
         </form>

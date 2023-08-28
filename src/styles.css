@@ -17,6 +17,7 @@
     --toggle-color: #FFF0F5;
     --text-color: #707070;
     --button-color: #A0C3D2;
+    --table-color:#FFF;
 
 
     /* ====== Transitions ======== */
@@ -27,12 +28,14 @@
 }
     /* ==== Dark Mode Colors ===== */
     body.dark{
-        --body-color: #18191a;
+        --body-color: #1a1918;
         --sidebar-color: #242526;
-        --primary-color: #3A3B3C;
+        --primary-color: #7f717a;
         --primary-color-light: #3A3B3C;
-        --toggle-color: #FFF;
-        --text-color: #ccc;
+        --toggle-color: #eff2f6;
+        --text-color: #FFF;
+        --button-color: #70838a;
+        --table-color:#d9dee1e0;
     }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

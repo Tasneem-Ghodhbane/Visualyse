@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CallService } from '../call.service';
 
 @Component({
   selector: 'app-new-call',
@@ -9,15 +10,38 @@ export class NewCallComponent {
 
   type : string = "sync";
 
-  // takhtaf fl methode thenya
-  show: boolean = false;
+  constructor(private callService: CallService) { }
 
 
+  addCall(callForm: any): void {
+    if (callForm.valid) {
+      const formData = new FormData();
+      formData.append('startPoint', callForm.value.startPoint);
+      formData.append('endPoint', callForm.value.endPoint);
+      formData.append('callType', callForm.value.callType);
+      if(this.type=="sync"){      
+        formData.append('API', callForm.value.callAPI);    }
+      if(this.type=="async"){
+        formData.append('topic', callForm.value.topic);
+        formData.append('eventProduced', callForm.value.eventProduced);
+      }
+    //l oranger temchi kima postman et azre9 fetah kima html(aka partie name)
+      formData.append('description', callForm.value.description);
 
-  onTypeChange() {
-    // Toggle properties based on type value (gonna keep the track on these properties selon type )
-    this.show = this.type === 'async';
 
+      this.callService.addCall(formData).subscribe(
+        (response) => {
+          // Handle successful response if needed
+          callForm.resetForm(); // Reset the form
+          this.type="sync";
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    }
   }
+
+
 //
 }

@@ -1,7 +1,7 @@
 .add-form{
     padding: 20px;
     border-radius: 8px;
-    background: #FFF;
+    background: var(--table-color);
     min-width: 500px;
     position: absolute;
     top: 50%;
@@ -20,6 +20,12 @@
     width: 100%;
     margin-top: 20px;
 
+}
+
+#callType {
+    border-radius: 6px;
+    border: solid 1px ;
+    margin: 10px;
 }
 
 .input-box label{

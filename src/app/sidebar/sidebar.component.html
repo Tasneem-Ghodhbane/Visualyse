@@ -1,5 +1,5 @@
 
-   <nav class="sidebar" [ngClass]="{ 'close': isSidebarClosed }">
+   <nav class="sidebar" [class.close]="isSidebarClosed" [ngClass]="{ 'close': isSidebarClosed }">
     <header>
         <div class="image-text">
             <span class="image">
@@ -37,8 +37,8 @@
         <div class="bottom-content">
             <li class="mode">
                 <div class="moon-sun">
-                    <i class='bx bx-moon icon moon'></i>
-                    <i class='bx bx-sun icon sun'></i>
+                    <i *ngIf="darkMode" class='bx bx-moon icon moon'></i>
+                    <i *ngIf="!darkMode" class='bx bx-sun icon sun'></i>
                 </div>
                 <span class="mode-text text">Dark Mode</span>
 

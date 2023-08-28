@@ -28,4 +28,9 @@ export class CallService {
     return this.http.delete<void>(url);
   }
 
+  addCall(formData : FormData): Observable<void> {
+    const url = `${this.baseUrl}/api/v1/calls`;
+    return this.http.post<void>(url, formData);
+  }
+
 }

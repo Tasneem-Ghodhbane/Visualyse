@@ -1,36 +1,39 @@
 <div >
-    <form class="add-form">
+    <form class="add-form"  (ngSubmit)="addCall(callForm)" #callForm="ngForm">
         <h3 class="header">Add New Call</h3> 
         <div class="input-box">
          <label for="Name" >Call Type</label>
-         <select id="selectInput" name="type" [(ngModel)]="type" >
+         <select id="callType" name="callType" [(ngModel)]="type" ngModel>
             <!-- ou bien : select id="selectInput" name="type" [(ngModel)]="type" (change)="onTypeChange()"-->
              <option value="sync">Synchronous</option>
              <option value="async">Asynchronous</option>
          </select>
          
+         <div>
+         <label for="Name"*ngIf = "type=='sync'">Issuer</label>
+         <label for="Name" *ngIf = "type=='async'">Producer</label>
+         <input type="text" id="startPoint" name="startPoint" ngModel >
+         </div>
+
+         <label for="Name"*ngIf = "type=='sync'">Target</label>
+         <label for="Name"*ngIf = "type=='async'">Consumer</label>
+         <input type="text" id="endPoint" name="endPoint" ngModel>
+         
          <div *ngIf = "type=='sync'">
             <!--<div *ngIf = "!show">-->
-             <label for="Name">Issuer</label>
-             <input type="text" id="issuer" >
-             <label for="Name">Target</label>
-             <input type="text" id="target" >
+             
              <label for="Name">API</label>
-             <input type="text" id="API" placeholder="API">
+             <input type="text" id="API" placeholder="API" name="API" ngModel>
          </div>
          <div *ngIf = "type=='async'">
-             <label for="Name">Producer</label>
-             <input type="text" id="producer" >
-             <label for="Name">Consumer</label>
-             <input type="text" id="consumer" >
              <label for="Name">Topic</label>
-             <input type="text" id="topic" >
+             <input type="text" id="topic" ngModel name="topic" >
              <label for="Name">Event Produced</label>
-             <input type="text" id="event-produced" >
+             <input type="text" id="eventProduced" name="eventProduced" ngModel >
          </div>
          <div class="input-box">
              <label for="description">Description</label>
-             <input type="text" id="description" placeholder="Call Description">
+             <input type="text" id="description" placeholder="Call Description" name="description" ngModel>
          </div>
          <button class="submit">Add Call</button>
         </div>

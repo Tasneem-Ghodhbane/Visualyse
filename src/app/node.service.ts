@@ -27,5 +27,10 @@ export class NodeService {
     const url = `${this.baseUrl}/api/v1/nodes/delete-all`; 
     return this.http.delete<void>(url);
   }
+
+  addItem(item: MyNode): Observable<void> {
+    const url = `${this.baseUrl}/api/v1/nodes`;
+    return this.http.post<void>(url, item);
+  }
   
 }

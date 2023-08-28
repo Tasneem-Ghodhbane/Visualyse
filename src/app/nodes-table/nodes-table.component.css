@@ -1,3 +1,7 @@
+.container{
+    width: 100%;
+}
+
 th{
     font-weight: 500;
     color: var(--text-color);
@@ -44,15 +48,15 @@ th{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1040px;
+    margin-bottom: 20px;
+
 }
 
 #table{
     width: 100%;
-    max-width: 1240px;
     border: 1px solid ;
     border-color: var(--body-color);
-    background-color:#FFF;
+    background-color:var(--table-color);
     padding: 10px;
     
 }
